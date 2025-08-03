@@ -10,24 +10,24 @@ const DISCORD_GUILD_ID = "822441666584903730";
 const DISCORD_BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 
 const poolValley = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "cda",
+  host: "sql10.freesqldatabase.com",
+  user: "sql10793328",
+  password: "EiIuwEqTMU",
+  database: "sql10793328",
 });
 
 const poolCDA = mysql.createPool({
-  host: "localhost",
+  host: "sql10.freesqldatabase.com",
   user: "root",
-  password: "",
-  database: "cda",
+  password: "EiIuwEqTMU",
+  database: "sql10793328",
 });
 
 const poolSite = mysql.createPool({
-  host: "localhost",
+  host: "sql10.freesqldatabase.com",
   user: "root",
-  password: "",
-  database: "site_cda",
+  password: "EiIuwEqTMU",
+  database: "sql10793328",
 });
 
 export async function GET(req) {
