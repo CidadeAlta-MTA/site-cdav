@@ -10,6 +10,7 @@ import { FaInstagram, FaYoutube, FaFacebook, FaTwitter, FaReact, FaDiscord } fro
 
 export default function PageHome() {
   const { data: session, status } = useSession();
+  const currentDate = new Date();
 
   useEffect(() => {
 
@@ -2568,7 +2569,7 @@ export default function PageHome() {
             <p className="modal-text">Faça login com Discord</p>
             <button
               className="discord-btn"
-              onClick={const Date = new Date(); console.log(`Chamado ao clicar no botao do discord Agora: ${Date.toString()}`)}
+              onClick={console.log(`Chamado ao clicar no botao do discord Agora: ${currentDate.toString()}`)}
             >
               Entrar com o Discord
             </button>
@@ -5157,7 +5158,7 @@ export default function PageHome() {
           <p className="modal-text">Faça login com Discord</p>
           <button
             className="discord-btn"
-            onClick={const Date = new Date(); console.log(`Chamado ao clicar no botao do discord Agora: ${Date.toString()}`)}
+            onClick={console.log(`Chamado ao clicar no botao do discord Agora: ${currentDate.toString()}`)}
           >
             Entrar com o Discord
           </button>
@@ -5289,5 +5290,6 @@ export default function PageHome() {
   );
 
 }
+
 
 
