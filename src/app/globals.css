@@ -510,6 +510,7 @@
   transition: all 0.3s ease-in-out; /* Transição suave */
   margin: 0 auto; /* Garante que o botão fique centralizado */
   width: fit-content; /* Faz o botão se ajustar ao conteúdo */
+  pointer-events: auto;
 }
 
 /* Hover no botão */
@@ -520,6 +521,7 @@
   background-size: contain; /* Ajusta a imagem para caber dentro do botão */
   opacity: 0.2; /* Torna a imagem mais sutil */
   z-index: -1; /* Coloca a imagem abaixo do conteúdo do botão */
+  pointer-events: auto;
 }
 
 /* Ícone do Discord */
