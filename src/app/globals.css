@@ -520,7 +520,6 @@
   background-size: contain; /* Ajusta a imagem para caber dentro do botão */
   opacity: 0.2; /* Torna a imagem mais sutil */
   z-index: -1; /* Coloca a imagem abaixo do conteúdo do botão */
-  pointer-events: none;
 }
 
 /* Ícone do Discord */
