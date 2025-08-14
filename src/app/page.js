@@ -2567,6 +2567,7 @@ export default function PageHome() {
             <h2 className="modal-title">Bem-Vindo!</h2>
             <p className="modal-text">Faça login com Discord</p>
             <button
+              href="/funfou"
               className="discord-btn"
               onClick={console.log("Chamado ao clicar no botao do discord")}
             >
@@ -5292,4 +5293,5 @@ export default function PageHome() {
       />
     </>
   );
+
 }
