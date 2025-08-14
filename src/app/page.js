@@ -5155,23 +5155,12 @@ export default function PageHome() {
         <div id="custom-modal-content" className="custom-modal-content">
           <h2 className="modal-title">Bem-Vindo!</h2>
           <p className="modal-text">Faça login com Discord</p>
-            <button
-              className="discord-btn"
-              onClick={const Date = new Date(); console.log(`Chamado ao clicar no botao do discord Agora: ${Date.toString()}`)}
-            >
-              Entrar com o Discord
-            </button>
-          /*<button
+          <button
             className="discord-btn"
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              console.log("Chamado ao clicar no botao do discord");
-              signIn("discord");
-            }}
+            onClick={const Date = new Date(); console.log(`Chamado ao clicar no botao do discord Agora: ${Date.toString()}`)}
           >
             Entrar com o Discord
-          </button>*/
+          </button>
         </div>
       </div>
       <div id="registro-modal-container">
@@ -5300,4 +5289,5 @@ export default function PageHome() {
   );
 
 }
+
 
