@@ -504,24 +504,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer; /* Mostra a mãozinha ao passar o mouse */
+  cursor: pointer;
   font-size: 18px;
   font-weight: bold;
-  transition: all 0.3s ease-in-out; /* Transição suave */
-  margin: 0 auto; /* Garante que o botão fique centralizado */
-  width: fit-content; /* Faz o botão se ajustar ao conteúdo */
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  width: fit-content;
   pointer-events: auto;
+  position: relative; /* ADICIONE ESTA LINHA */
+  z-index: 1; /* ADICIONE ESTA LINHA */
 }
 
-/* Hover no botão */
+/* Hover no botão - CORRIGIDO */
 .discord-btn::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-size: contain; /* Ajusta a imagem para caber dentro do botão */
-  opacity: 0.2; /* Torna a imagem mais sutil */
-  z-index: -1; /* Coloca a imagem abaixo do conteúdo do botão */
-  pointer-events: auto;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: -1;
+  pointer-events: none; /* MUDE PARA 'none' */
+  border-radius: 8px; /* ADICIONE PARA SEGUIR A BORDA DO BOTÃO */
 }
 
 /* Ícone do Discord */
@@ -530,6 +533,12 @@
   height: 24px;
   fill: white;
   pointer-events: none;
+}
+
+/* Adicione um hover effect */
+.discord-btn:hover {
+  background: #4752C4;
+  transform: translateY(-2px);
 }
 
 /* Desabilita a rolagem e seleção de texto quando o modal estiver ativo */
