@@ -68,8 +68,17 @@ export default function PageHome() {
   function handleDiscordLogin(e) {
     e.preventDefault();
     e.stopPropagation();
-    console.log("Chamado ao clicar no botao do discord");
-    signIn("discord");
+    console.log("Botão clicado!");
+    console.log("Session status:", status);
+    console.log("Chamando signIn...");
+    
+    try {
+      signIn("discord", { 
+        callbackUrl: "/dashboard" // Especifique uma URL de callback
+      });
+    } catch (error) {
+      console.error("Erro no signIn:", error);
+    }
   }
 
   const toggleDropdown = () => {
@@ -5290,6 +5299,7 @@ export default function PageHome() {
   );
 
 }
+
 
 
 
