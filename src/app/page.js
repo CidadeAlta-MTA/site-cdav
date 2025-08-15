@@ -2578,10 +2578,11 @@ export default function PageHome() {
             <p className="modal-text">Faça login com Discord</p>
             <button
               className="discord-btn"
-              onClick={
-                (e) => {handleDiscordLogin(e)}
-                console.log(`Chamado ao clicar no botao do discord Agora: ${currentDate.toString()}`)
-              }
+              onClick={() => {
+                console.log("Teste de clique funcionando!");
+                alert("Botão funcionando!");
+                signIn("discord");
+              }}
             >
               Entrar com o Discord
             </button>
@@ -5170,10 +5171,11 @@ export default function PageHome() {
           <p className="modal-text">Faça login com Discord</p>
           <button
             className="discord-btn"
-            onClick={
-              (e) => {handleDiscordLogin(e)}
-              console.log(`Chamado ao clicar no botao do discord Agora: ${currentDate.toString()}`)
-            }
+            onClick={() => {
+              console.log("Teste de clique funcionando!");
+              alert("Botão funcionando!");
+              signIn("discord");
+            }}
           >
             Entrar com o Discord
           </button>
@@ -5305,6 +5307,7 @@ export default function PageHome() {
   );
 
 }
+
 
 
 
