@@ -11,6 +11,20 @@ import { FaInstagram, FaYoutube, FaFacebook, FaTwitter, FaReact, FaDiscord } fro
 export default function PageHome() {
   const { data: session, status } = useSession();
   const currentDate = new Date();
+  const [data, setData] = useState(null);
+
+
+  useEffect(() => {
+    const el = document.getElementById("__NEXT_DATA__");
+    if (el) {
+      try {
+        const json = JSON.parse('{ "patch": null }');
+        setData(json);
+      } catch (e) {
+        console.error("Erro ao parsear __NEXT_DATA__", e);
+      }
+    }
+  }, []);
 
   useEffect(() => {
 
@@ -5299,6 +5313,9 @@ export default function PageHome() {
           </form>
         </div>
       </div>
+      {data && (
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+      )}
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"
         strategy="beforeInteractive"
@@ -5307,6 +5324,7 @@ export default function PageHome() {
   );
 
 }
+
 
 
 
